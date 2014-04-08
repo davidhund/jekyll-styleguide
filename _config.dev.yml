@@ -1,3 +1,4 @@
+# DEV version of config file: mainly baseurl change
 sitename: Example Styleguide
 version: '0.1 Beta'
 # # NOTE: you _could_ add custom CSS / JS here
@@ -13,9 +14,7 @@ ga_code: 'UA-XXXXX-X'
 # root repo for this project
 repo:        "https://github.com/davidhund/jekyll-styleguide"
 # baseurl: in this case the gh-pages subfolder
-baseurl:     /jekyll-styleguide/
-#url: http://localhost:4000
-#safe:        false
+baseurl:     /
 port: 4000
 source:      .
 destination: ./_site
