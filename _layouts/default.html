@@ -1,0 +1,21 @@
+{% include head.html %}
+		<header class="sg-header">
+			<p class="sg-info"><a href="{{site.repo}}">Jekyll Styleguide</a> v{{site.version}}</p>
+			<h1 class="sg-title"><a href="/">{{site.sitename}}</a></h1>
+			<ul class="sg-nav">
+				<li class="sg-nav__root"><a href="/">Home</a></li>
+				<li class="is-active">{{page.title}}</li>
+			</ul>
+		</header>
+
+		<div class="sg-content">
+			<a href="#navigation" class="sg-skiplink">Skip to navigation</a>
+			<main class="sg-main">
+			{{content}}
+			</main>
+			<nav class="sg-sidebar" id="navigation">
+				{% include sidebar.html %}
+			</nav>
+		</div>
+
+{% include foot.html %}

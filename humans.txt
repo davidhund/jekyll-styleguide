@@ -1,0 +1,13 @@
+# humanstxt.org/
+
+# TEAM
+
+	David Hund - Front-end developer @valuedstandards
+
+# THANKS
+
+    @csswizardry, @snookca, and so many others...
+
+# TECHNOLOGY COLOPHON
+
+	GulpJS, Jekyll, HTML5, CSS3 (Why are we even including this ;)

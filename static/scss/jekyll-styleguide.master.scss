@@ -1,0 +1,263 @@
+/* ****************************************************************************
+   STYLE
+   ----------------------------------------------------------------------------
+   @name:        static/scss/jekyll-styleguide.main.scss
+   @author:      David Hund
+   @note:        Main CSS file with Structural Styles for Jekyll Styleguide
+                 - Structural Styles mainly. Hardly any design
+                 - @import'ed by app.scss
+                 - Some Theme styles can be overridden
+
+                 - Structural UI only: edit app.scss instead!
+
+ =========================================================================== */
+
+/* 
+   NOTE: we name-space all styles and target quite specifically
+         so as to not override the linked Project styles
+ */
+$dh-ns: 'sg' !default; // chosen prefix for classnames
+
+// Structural Styles 
+.#{$dh-ns}-page body { margin: 0; padding: 0; }
+.#{$dh-ns}-header,
+.#{$dh-ns}-footer,
+.#{$dh-ns}-main,
+.#{$dh-ns}-sidebar {
+  box-sizing: border-box;
+  display: block;
+  padding: .5em 1em;
+  margin: 0;
+}
+.#{$dh-ns}-content { overflow: hidden; }
+.#{$dh-ns}-header,
+.#{$dh-ns}-footer,
+.#{$dh-ns}-sidebar {
+  line-height: 1.5;
+  a {
+    color: #222; 
+    &:hover, &:focus, &:active {
+      color: inherit;
+    }
+  }
+  h1, h2 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0 0 .5em 0;
+  }
+  .#{$dh-ns}-title {
+    font-size: 1.5em; 
+  }
+}
+.#{$dh-ns}-sidebar { padding-top: 1.75em; }
+.#{$dh-ns}-main { padding-top: .5em; }
+
+.#{$dh-ns}-header,
+.#{$dh-ns}-footer { text-align: center; padding: 1em; }
+
+.#{$dh-ns}-component__title a { color: #222; }
+
+// Images 
+.#{$dh-ns}-figure,
+.#{$dh-ns}-figure img {
+  max-width: 100%;
+}
+
+// Skiplink
+.#{$dh-ns}-skiplink {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background-color: #222;
+  color: #FFF;
+  padding: .5em;
+  margin-top: 1px; 
+  position: relative;
+  &:after {
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 10px solid;
+    border-color: #222 transparent transparent transparent;
+    margin: 0 auto auto -10px;
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+  }
+}
+
+// NAV object
+.#{$dh-ns}-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+// TOGGLER button
+.#{$dh-ns}-sidebar .js-expand-toggler {
+  float: right;
+  font-size: 12px;
+  background-color: rgba(#222,0.2);
+  color: rgba(#222,0.5);
+  text-decoration: none;
+  text-transform: lowercase;
+  text-align: center;
+  font-weight: normal;
+  line-height: 2;
+  padding: 0 1em;
+  border-radius: 3px;
+}
+
+// Sidebar NAVIGATION
+.#{$dh-ns}-sidebar {
+  > h2 {
+    padding-bottom: .5em;
+    border-bottom: 1px solid #444;
+  }
+}
+.#{$dh-ns}-linklist {
+  list-style-type: none;
+  margin: 0 0 1em 0;
+  padding: 0;
+  > li > a {
+    display: block;
+    padding: .5em 0;
+    border-bottom: 1px solid #DDD;
+    text-decoration: none;
+  }
+}
+
+// STATE classes
+.is-current-page {
+  &, & a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #444 !important; 
+  }
+}
+.is-hidden {
+  height: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+
+// COMPONENT containers
+.#{$dh-ns}-component {
+  box-sizing: border-box;
+  padding: 1em;
+  border: 1px solid #DDD;
+  margin-bottom: 1em;
+}
+.#{$dh-ns}-component__title {
+  font-size: 1em;
+  text-align: right;
+  padding: .5em;
+  background-color: rgba(#CCC, 0.25);
+  border-bottom: 1px solid #DDD;
+  margin-top: -1em;
+  margin-right: -1em;
+  margin-left: -1em;
+  margin-bottom: 1em;
+}
+
+.#{$dh-ns}-color-swatch {
+  margin: 0 auto 1em auto;
+  margin-bottom: 1em;
+  border: 1px solid #444;
+  text-align: center;
+  padding-top: 4em;
+}
+.#{$dh-ns}-color-swatch__color {
+  display: block;
+  background: #FFF;
+  color: #444;
+  padding: .5em 1em;
+  border-top: 1px solid #444;
+}
+.#{$dh-ns}-color-swatch__color + .#{$dh-ns}-color-swatch__color { color: #222; }
+
+// Component TABS
+// Style as tabs. See note re: functionality below!
+.#{$dh-ns}-tabs {
+  list-style-type: none;
+  padding: 0;
+  border-bottom: 1px solid #DDD;
+  margin: 0;
+  > li {
+    display: inline-block;
+  }
+  > li > a {
+    display: inline-block;
+    background-color: lighten(#DDD, 37%);
+    text-decoration: none;
+    padding: .5em 1em;
+    border: 1px solid #DDD;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    position: relative;
+    bottom: -1px;
+  }
+  > li.is-active a, a.is-active {
+    background-color: #FFF;
+    color: #444;
+    border-bottom-color: #FFF;
+  }
+  // Mobile first: so we start 'stacked'
+  // We use max-width here to no interfere with .nav as a whole
+  @media (max-width: 40em) {
+    > li, li > a { display: block; }
+  }
+}
+
+// We only style 'functional tabs': meaning: we style based on added ARIA roles now!
+
+// Hack to cover 1px gap between first tab and tabpanel
+// only needed when functional, so we style based on ARIA roles
+[role="tabpanel"] {
+  position: relative;
+  &:before {
+    content: " ";
+    background: #DDD; // color of tabpanel border
+    width: 1px; height: 1px;
+    position: absolute;
+    top: -1px; left: -1px;
+  }
+}
+
+// Style tabcontent and Hide inactive tabpanels
+[role="tabpanel"] {
+  // Add padding / border
+  padding: 1em;
+  border: 1px solid #DDD;
+  border-width: 0 1px 1px 1px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  // Hide inactive tabs
+  &[aria-hidden="true"] { display: none; }
+}
+
+
+// Mobile First Mediaquery overrides
+@media screen and (min-width: 40em) {
+  .#{$dh-ns}-header   { text-align: left; }
+  .#{$dh-ns}-info     { float: right; margin: 0; }
+  .#{$dh-ns}-skiplink { display: none; }
+  .#{$dh-ns}-main     { float: right; width: 69%; min-height: 30em; }
+  .#{$dh-ns}-sidebar  { float: left; width: 30%; }
+  .#{$dh-ns}-nav > li {
+    display: inline-block;
+    padding-right: .75em; 
+    margin-right: .5em; 
+    border-right: 1px solid #444;
+    &:last-child { border: none; }
+  }
+  .#{$dh-ns}-component--color {
+    display: inline-block;
+    width: 31%;
+    margin-right: 3%;
+    text-align: center;
+    vertical-align: top;
+    &:nth-child(3n) { margin-right: 0; }
+  }
+}
