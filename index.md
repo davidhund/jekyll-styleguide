@@ -12,7 +12,7 @@ Manually editing `HTML` and `CSS` files is hard work. This is where `Jekyll-Styl
 
 {: .message} [Jekyll](http://jekyllrb.com) is a *static site generator*: a script that takes a folder of [Markdown](http://daringfireball.net/projects/markdown/) files and converts them to a complete website.
 
-{: style="width:352px;float:right;margin-left:1em;" class="sg-figure"} ![Styleguide example]({{site.baseurl}}static/scss/themes/hotel-chevalier-theme.png "Pattern Library")
+{: style="width:352px;float:right;margin-left:1em;" class="sg-figure"} ![Styleguide example]({{site.baseurl}}/static/scss/themes/hotel-chevalier-theme.png "Pattern Library")
 
 Jekyll's main focus is to quickly setup a weblog, but we can use it to create a collection of `HTML` and `CSS` *components* just as easily. Now, to add a new Component, simply create a new markdown (`.md` or `.html`) file with the HTML for your component in the `posts/components` folder and run `jekyll build` (or use the included `GulpJS` script).
 
