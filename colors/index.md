@@ -4,6 +4,8 @@ title: Colors
 category: colors
 ---
 
+## All Colors
+
 <!-- Color: Accent -->
 <div class="sg-component sg-component--color" id="accent">
 	<h2 class="sg-component__title">Accent</h2>
