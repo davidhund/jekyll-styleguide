@@ -3,17 +3,17 @@ version: '0.1 Beta'
 # # NOTE: you _could_ add custom CSS / JS here
 # # .. but better is to add it to /static/scss/app.scss and/or individual component.md files
 # custom_css: 
-# - "{{site.baseurl}}static/css/YOUR-CSS-COMPONENTS.css"
-# - "{{site.baseurl}}static/css/ANOTHER-CSS-COMPONENTS.css"
+# - "{{site.baseurl}}/static/css/YOUR-CSS-COMPONENTS.css"
+# - "{{site.baseurl}}/static/css/ANOTHER-CSS-COMPONENTS.css"
 # custom_js: 
-# - "{{site.baseurl}}static/js/YOUR-CSS-COMPONENTS.js"
-# - "{{site.baseurl}}static/js/ANOTHER-CSS-COMPONENTS.js"
+# - "{{site.baseurl}}/static/js/YOUR-CSS-COMPONENTS.js"
+# - "{{site.baseurl}}/static/js/ANOTHER-CSS-COMPONENTS.js"
 ga_code: 'UA-XXXXX-X'
 # Check: https://github.com/jekyll/jekyll/blob/df8458275de4dc3d0f9b92c5247ff20832d1cc8e/lib/jekyll/configuration.rb
 # root repo for this project
 repo:        "https://github.com/davidhund/jekyll-styleguide"
 # baseurl: in this case the gh-pages subfolder
-baseurl:     /jekyll-styleguide/
+baseurl:     /jekyll-styleguide
 #url: http://localhost:4000
 #safe:        false
 port: 4000
