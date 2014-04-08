@@ -21,7 +21,7 @@
 // =01 The CSS for YOUR PROJECT: Add _your_ main.css file here
 // ----------------------------------------------------------------------------
 // Example: use my `DH Kickstart Styles` patterns:
-// @import "dh-kickstart-style/style";
+@import "dh-kickstart-style/style";
 // .. Or:
 // @import "<your-css-lib>/main";
  
@@ -32,7 +32,7 @@
  
 // =01 THEMES: @import (or create) themes for the styleguide UI
 // ----------------------------------------------------------------------------
-@import "themes/plain.theme.scss";            // Simple 'Plain' theme (black/white), easy to modify
+// @import "themes/plain.theme.scss";            // Simple 'Plain' theme (black/white), easy to modify
 // @import "themes/mist.theme.scss";             // Simple 'Mist' theme  (mistblue)
-// @import "themes/hotel-chevalier.theme.scss";  // Slightly more style (green)
+@import "themes/hotel-chevalier.theme.scss";  // Slightly more style (green)
 

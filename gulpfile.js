@@ -52,12 +52,12 @@ gulp.task('copycss', function() {
 // Start a `jekyll build` task
 // From: http://stackoverflow.com/questions/21293999/use-jekyll-with-gulp
 gulp.task('jekyll-build', function() {
-	require('child_process').spawn('jekyll', ['build', '--config _config.dev.yml'], {stdio: 'inherit'});
+	require('child_process').spawn('jekyll', ['build', '--config=_config.dev.yml'], {stdio: 'inherit'});
 });
 
 // Start a `jekyll build --watch` task
 gulp.task('jekyll-watch', function() {
-	require('child_process').spawn('jekyll', ['build', '--watch', '--config _config.dev.yml'], {stdio: 'inherit'});
+	require('child_process').spawn('jekyll', ['build', '--watch', '--config=_config.dev.yml'], {stdio: 'inherit'});
 });
 
 // BROWSER-SYNC
