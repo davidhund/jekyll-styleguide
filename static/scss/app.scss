@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* ****************************************************************************
+   STYLE
+   ----------------------------------------------------------------------------
+   @name:        static/scss/app.scss
+   @author:      David Hund
+   @note:        Main CSS file combining all needed partials. Output minified
+                 - @import dh-kickstart-style for generic styles
+                 - adds specific styles for jekkyl-styleguide
+
+   @contents:
+
+                TODO: Keep this list updated!
+
+                - 01 The CSS for YOUR PROJECT
+                - 02 Jekyll Styleguide Structural Styles
+                - 03 Jekyll Styleguide THEMES
+
+ =========================================================================== */
+ 
+// =01 The CSS for YOUR PROJECT: Add _your_ main.css file here
+// ----------------------------------------------------------------------------
+// Example: use my `DH Kickstart Styles` patterns:
+// @import "dh-kickstart-style/style";
+// .. Or:
+// @import "<your-css-lib>/main";
+ 
+// =01 Jekyll Styleguide Structural Styles
+// ----------------------------------------------------------------------------
+@import "jekyll-styleguide.master.scss";
+
+ 
+// =01 THEMES: @import (or create) themes for the styleguide UI
+// ----------------------------------------------------------------------------
+@import "themes/plain.theme.scss";            // Simple 'Plain' theme (black/white), easy to modify
+// @import "themes/mist.theme.scss";             // Simple 'Mist' theme  (mistblue)
+// @import "themes/hotel-chevalier.theme.scss";  // Slightly more style (green)
+

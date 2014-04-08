@@ -1,0 +1,27 @@
+sitename: Example Styleguide
+version: '0.1 Beta'
+# # NOTE: you _could_ add custom CSS / JS here
+# # .. but better is to add it to /static/scss/app.scss and/or individual component.md files
+# custom_css: 
+# - "/static/css/YOUR-CSS-COMPONENTS.css"
+# - "/static/css/ANOTHER-CSS-COMPONENTS.css"
+# custom_js: 
+# - "/static/js/YOUR-CSS-COMPONENTS.js"
+# - "/static/js/ANOTHER-CSS-COMPONENTS.js"
+ga_code: 'UA-XXXXX-X'
+# Check: https://github.com/jekyll/jekyll/blob/df8458275de4dc3d0f9b92c5247ff20832d1cc8e/lib/jekyll/configuration.rb
+#safe:        false
+port: 4000
+baseurl:     /
+#url: http://localhost:4000
+source:      .
+destination: ./_site
+exclude:     [node_modules, './static/scss/', .sass-cache, Gruntfile.js, package.json, HOWTO.md]
+#plugins:     ./_plugins
+future:      false
+lsi:         false
+#pygments:    false
+#markdown:    maruku
+permalink:   /:categories/:title/
+# root repo for this project
+repo:        "https://github.com/davidhund/jekyll-styleguide"

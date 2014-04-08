@@ -1,0 +1,123 @@
+/*
+	= Styleguide Theme: Mist
+	  for the Jekyll CSS Styleguide
+---------------------------------------------------------------------------- */
+// Theme: Mist
+
+// Font face for this theme
+$sg-ff: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Colors for this theme
+$sg-cl-accent1: #B3C3C3;                    // Mist
+$sg-cl-accent2: #FFF;                       // White
+$sg-cl-accent3: $sg-cl-accent2;             // White
+$sg-cl-accent4: darken($sg-cl-accent1,10%); // Dark Mist
+$sg-sidebar-border: $sg-cl-accent4;         // Dark Mist
+
+// No need to change this unless you've changed it in
+// the main Jekyll CSS Styleguide files also...
+$dh-ns: 'sg' !default; // chosen prefix for classnames
+
+
+/* styles:
+---------------------------------------------------------------------------- */
+
+// Content Regions
+.#{$dh-ns}-header,
+.#{$dh-ns}-sidebar,
+.#{$dh-ns}-footer {
+	background-color: $sg-cl-accent1;
+	color: $sg-cl-accent3; 
+	& a { color: $sg-cl-accent2; }
+	font-family: $sg-ff;
+}
+
+// list borders
+.#{$dh-ns}-nav li { border-color: $sg-cl-accent3; }
+
+// Main Title
+.#{$dh-ns}-title {
+	text-transform: uppercase;
+	font-weight: normal !important;
+	a { text-decoration: none; } 
+}
+
+// Sidebar NAVIGATION
+.#{$dh-ns}-sidebar {
+	> h2 { 
+		border-color: $sg-cl-accent2; 
+	}
+}
+.#{$dh-ns}-linklist {
+	> li > a { 
+		color: $sg-cl-accent3;
+		border-bottom: 1px dotted $sg-cl-accent3;
+		&:hover, &:focus, &:active {
+			color: $sg-cl-accent2;
+			border-bottom: 1px solid $sg-cl-accent2;
+		}
+	}
+}
+
+// Toggler Button
+.#{$dh-ns}-sidebar .js-expand-toggler {
+	background-color: $sg-cl-accent2;
+	color: $sg-cl-accent1;
+	&:hover, &:focus, &:active {
+		background-color: darken($sg-cl-accent1,5%);
+		color: $sg-cl-accent3;
+	}
+}
+
+// Skiplink
+.#{$dh-ns}-skiplink {
+	background-color: $sg-cl-accent2;
+	color: $sg-cl-accent1;
+	&:after { border-color: $sg-cl-accent2 transparent transparent transparent; }
+}
+
+// Components
+.#{$dh-ns}-component,
+.#{$dh-ns}-component__title { border-color: $sg-cl-accent4; }
+.#{$dh-ns}-component__title {
+	&, & a { color: $sg-cl-accent1; }
+	background-color: rgba($sg-cl-accent4, 0.25);
+	font-weight: normal;
+}
+
+// Tabs
+.#{$dh-ns}-tabs {
+  border-bottom: 1px solid $sg-cl-accent4;
+  > li > a {
+    background-color: lighten($sg-cl-accent4, 30%);
+    color: $sg-cl-accent4;
+    border: 1px solid $sg-cl-accent4;
+  }
+}
+[role="tabpanel"] {
+	border-color: $sg-cl-accent4; 
+	&:before { background: $sg-cl-accent4; }
+}
+
+// State
+.is-current-page,
+.is-current-page > a {
+	color: $sg-cl-accent2 !important;
+	border-color: $sg-cl-accent2 !important;
+}
+
+// Mobile First Mediaquery overrides
+@media screen and (min-width: 40em) {
+	// Fancy Faux Columns
+	@if type-of($sg-sidebar-border) == color {
+		.#{$dh-ns}-page {
+			background-image: linear-gradient(
+				to right,
+				$sg-cl-accent1 30%, 
+				$sg-sidebar-border 30%,
+				$sg-sidebar-border 30.33%,
+				#FFF 30.33%
+			);
+		}
+	}
+}

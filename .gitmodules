@@ -1,0 +1,3 @@
+[submodule "static/scss/dh-kickstart-style"]
+	path = static/scss/dh-kickstart-style
+	url = https://github.com/davidhund/dh-kickstart-style.git
