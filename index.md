@@ -12,7 +12,7 @@ Manually editing `HTML` and `CSS` files is hard work. This is where `Jekyll-Styl
 
 {: .message} [Jekyll](http://jekyllrb.com) is a *static site generator*: a script that takes a folder of [Markdown](http://daringfireball.net/projects/markdown/) files and converts them to a complete website.
 
-{: style="width:352px;float:right;margin-left:1em;" class="sg-figure"} ![Styleguide example](/static/scss/themes/hotel-chevalier-theme.png "Pattern Library")
+{: style="width:352px;float:right;margin-left:1em;" class="sg-figure"} ![Styleguide example]({{site.baseurl}}static/scss/themes/hotel-chevalier-theme.png "Pattern Library")
 
 Jekyll's main focus is to quickly setup a weblog, but we can use it to create a collection of `HTML` and `CSS` *components* just as easily. Now, to add a new Component, simply create a new markdown (`.md` or `.html`) file with the HTML for your component in the `posts/components` folder and run `jekyll build` (or use the included `GulpJS` script).
 
@@ -44,11 +44,10 @@ Then add your project's CSS file to Jekyll Styleguide (or `@import` is in its `a
 
 [Jekyll requires Ruby, Rubygems and a Linux, Unix or Mac OSX system](http://jekyllrb.com/docs/installation/). If you do not yet have those installed—and are on Mac OSX—I strongly advise you to install those as follows:
 
-{: .message .message--warning} **Note:** Skip these steps if you already have the needed tools (Ruby, Gems, etc) installed. 
+{: .message .message--warning} **Note:** Skip these steps if you already have the needed tools (Ruby, Gems, etc) installed. Avoid using `sudo`
 
-1. (Avoid using `sudo`)
-2. Make sure you have the [OSX Xcode *Command Line Tools* installed](https://encrypted.google.com/search?hl=en&q=How+to+install+Xcode+command+line+tools)
-3. Install Ruby via [RVM](http://rvm.io):  
+1. Make sure you have the [OSX Xcode *Command Line Tools* installed](https://encrypted.google.com/search?hl=en&q=How+to+install+Xcode+command+line+tools)
+2. Install Ruby via [RVM](http://rvm.io):  
 `\curl -sSL https://get.rvm.io | bash -s stable`
 
 ### Installation {: #install}
@@ -59,12 +58,24 @@ Now you should have all the requirements for installing Jekyll. The [GulpJS](htt
 2. [Download]({{site.repo}}) **or** `git clone git@github.com:davidhund/jekyll-styleguide.git`
 3. Add your colors in `colors/index.md`
 4. Add your components in `posts/components/`
-5. Run Jekyll: `jekyll build`
+5. Run Jekyll: `jekyll build --config=_config.dev.yml`
 6. Go to `4.` and repeat...
 
 ### Usage {: #usage}
 
-Take a look at the `_config.yml` to set some global variables such as the `name` and `version` of your Style Guide, a link to the `repository` etc.
+Take a look at the `_config.dev.yml` (`_config.yml`) to set some global variables such as the `baseurl`, `name` and `version` of your Style Guide, a link to the `repository` etc.
+
+### Gulp
+
+I've added an **experimental** [GulpJS](http://GulpJS.com) workflow—[GruntJS](http://gruntjs.com) should be very similar—to automate re-generating the Styleguide, while compiling your Sass files, Concatenating your JS, etc.
+
+To install and use Gulp (you should be at the root of the project, in a command prompt):
+
+1. `npm install -g gulp` to install Gulp globally
+2. `npm install` to install all needed Gulp plugins
+3. Simply run `gulp`: this fires up a local webserver and watches your Sass, JS and components.
+4. Now go change some files, save, and watch your browser autoreload ;)
+
 
 ### Troubleshooting {: #troubleshooting}
 
