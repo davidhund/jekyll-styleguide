@@ -1,0 +1,420 @@
+/* ****************************************************************************
+   STYLE
+   ----------------------------------------------------------------------------
+   @name:        static/scss/app.scss
+   @author:      David Hund
+   @note:        Main CSS file combining all needed partials. Output minified
+                 - @import dh-kickstart-style for generic styles
+                 - adds specific styles for jekkyl-styleguide
+
+   @contents:
+
+                TODO: Keep this list updated!
+
+                - 01 The CSS for YOUR PROJECT
+                - 02 Jekyll Styleguide Structural Styles
+                - 03 Jekyll Styleguide THEMES
+
+ =========================================================================== */
+/* ****************************************************************************
+   STYLE
+   ----------------------------------------------------------------------------
+   @name:        static/scss/jekyll-styleguide.main.scss
+   @author:      David Hund
+   @note:        Main CSS file with Structural Styles for Jekyll Styleguide
+                 - Structural Styles mainly. Hardly any design
+                 - @import'ed by app.scss
+                 - Some Theme styles can be overridden
+
+                 - Structural UI only: edit app.scss instead!
+
+ =========================================================================== */
+/* 
+   NOTE: we name-space all styles and target quite specifically
+         so as to not override the linked Project styles
+ */
+.sg-page body {
+  margin: 0;
+  padding: 0;
+}
+
+.sg-header,
+.sg-footer,
+.sg-main,
+.sg-sidebar {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  padding: .5em 1em;
+  margin: 0;
+}
+
+.sg-content {
+  overflow: hidden;
+}
+
+.sg-header,
+.sg-footer,
+.sg-sidebar {
+  line-height: 1.5;
+}
+.sg-header a,
+.sg-footer a,
+.sg-sidebar a {
+  color: #222;
+}
+.sg-header a:hover, .sg-header a:focus, .sg-header a:active,
+.sg-footer a:hover,
+.sg-footer a:focus,
+.sg-footer a:active,
+.sg-sidebar a:hover,
+.sg-sidebar a:focus,
+.sg-sidebar a:active {
+  color: inherit;
+}
+.sg-header h1, .sg-header h2,
+.sg-footer h1,
+.sg-footer h2,
+.sg-sidebar h1,
+.sg-sidebar h2 {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0 0 .5em 0;
+}
+.sg-header .sg-title,
+.sg-footer .sg-title,
+.sg-sidebar .sg-title {
+  font-size: 1.5em;
+}
+
+.sg-sidebar {
+  padding-top: 1.75em;
+}
+
+.sg-main {
+  padding-top: .5em;
+}
+
+.sg-header,
+.sg-footer {
+  text-align: center;
+  padding: 1em;
+}
+
+.sg-component__title a {
+  color: #222;
+}
+
+.sg-figure,
+.sg-figure img {
+  max-width: 100%;
+}
+
+.sg-skiplink {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background-color: #222;
+  color: #FFF;
+  padding: .5em;
+  margin-top: 1px;
+  position: relative;
+}
+.sg-skiplink:after {
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 10px solid;
+  border-color: #222 transparent transparent transparent;
+  margin: 0 auto auto -10px;
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+}
+
+.sg-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sg-sidebar .js-expand-toggler {
+  float: right;
+  font-size: 12px;
+  background-color: rgba(34, 34, 34, 0.2);
+  color: rgba(34, 34, 34, 0.5);
+  text-decoration: none;
+  text-transform: lowercase;
+  text-align: center;
+  font-weight: normal;
+  line-height: 2;
+  padding: 0 1em;
+  border-radius: 3px;
+}
+
+.sg-sidebar > h2 {
+  padding-bottom: .5em;
+  border-bottom: 1px solid #444;
+}
+
+.sg-linklist {
+  list-style-type: none;
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+.sg-linklist > li > a {
+  display: block;
+  padding: .5em 0;
+  border-bottom: 1px solid #DDD;
+  text-decoration: none;
+}
+
+.is-current-page, .is-current-page a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #444 !important;
+}
+
+.is-hidden {
+  height: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.sg-component {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1em;
+  border: 1px solid #DDD;
+  margin-bottom: 1em;
+}
+
+.sg-component__title {
+  font-size: 1em;
+  text-align: right;
+  padding: .5em;
+  background-color: rgba(204, 204, 204, 0.25);
+  border-bottom: 1px solid #DDD;
+  margin-top: -1em;
+  margin-right: -1em;
+  margin-left: -1em;
+  margin-bottom: 1em;
+}
+
+.sg-color-swatch {
+  margin: 0 auto 1em auto;
+  margin-bottom: 1em;
+  border: 1px solid #444;
+  text-align: center;
+  padding-top: 4em;
+}
+
+.sg-color-swatch__color {
+  display: block;
+  background: #FFF;
+  color: #444;
+  padding: .5em 1em;
+  border-top: 1px solid #444;
+}
+
+.sg-color-swatch__color + .sg-color-swatch__color {
+  color: #222;
+}
+
+.sg-tabs {
+  list-style-type: none;
+  padding: 0;
+  border-bottom: 1px solid #DDD;
+  margin: 0;
+}
+.sg-tabs > li {
+  display: inline-block;
+}
+.sg-tabs > li > a {
+  display: inline-block;
+  background-color: white;
+  text-decoration: none;
+  padding: .5em 1em;
+  border: 1px solid #DDD;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  position: relative;
+  bottom: -1px;
+}
+.sg-tabs > li.is-active a, .sg-tabs a.is-active {
+  background-color: #FFF;
+  color: #444;
+  border-bottom-color: #FFF;
+}
+@media (max-width: 40em) {
+  .sg-tabs > li, .sg-tabs li > a {
+    display: block;
+  }
+}
+
+[role="tabpanel"] {
+  position: relative;
+}
+[role="tabpanel"]:before {
+  content: " ";
+  background: #DDD;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+[role="tabpanel"] {
+  padding: 1em;
+  border: 1px solid #DDD;
+  border-width: 0 1px 1px 1px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+[role="tabpanel"][aria-hidden="true"] {
+  display: none;
+}
+
+@media screen and (min-width: 40em) {
+  .sg-header {
+    text-align: left;
+  }
+
+  .sg-info {
+    float: right;
+    margin: 0;
+  }
+
+  .sg-skiplink {
+    display: none;
+  }
+
+  .sg-main {
+    float: right;
+    width: 69%;
+    min-height: 30em;
+  }
+
+  .sg-sidebar {
+    float: left;
+    width: 30%;
+  }
+
+  .sg-nav > li {
+    display: inline-block;
+    padding-right: .75em;
+    margin-right: .5em;
+    border-right: 1px solid #444;
+  }
+  .sg-nav > li:last-child {
+    border: none;
+  }
+
+  .sg-component--color {
+    display: inline-block;
+    width: 31%;
+    margin-right: 3%;
+    text-align: center;
+    vertical-align: top;
+  }
+  .sg-component--color:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+/*
+	= Styleguide Theme: Plain
+	  for the Jekyll CSS Styleguide
+---------------------------------------------------------------------------- */
+/* styles:
+---------------------------------------------------------------------------- */
+.sg-header,
+.sg-sidebar,
+.sg-footer {
+  background-color: white;
+  color: #444444;
+  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.sg-header a,
+.sg-sidebar a,
+.sg-footer a {
+  color: #444444;
+}
+
+.sg-nav li {
+  border-color: #444444;
+}
+
+.sg-title {
+  text-transform: uppercase;
+  font-weight: normal !important;
+}
+.sg-title a {
+  text-decoration: none;
+}
+
+.sg-sidebar > h2 {
+  border-color: #444444;
+}
+
+.sg-linklist > li > a {
+  color: #444444;
+  border-bottom: 1px dotted #444444;
+}
+.sg-linklist > li > a:hover, .sg-linklist > li > a:focus, .sg-linklist > li > a:active {
+  color: #444444;
+  border-bottom: 1px solid #444444;
+}
+
+.sg-sidebar .js-expand-toggler {
+  background-color: #444444;
+  color: white;
+}
+.sg-sidebar .js-expand-toggler:hover, .sg-sidebar .js-expand-toggler:focus, .sg-sidebar .js-expand-toggler:active {
+  background-color: #f2f2f2;
+  color: #444444;
+}
+
+.sg-skiplink {
+  background-color: #444444;
+  color: white;
+}
+.sg-skiplink:after {
+  border-color: #444444 transparent transparent transparent;
+}
+
+.sg-component,
+.sg-component__title {
+  border-color: #e6e6e6;
+}
+
+.sg-component__title {
+  background-color: rgba(230, 230, 230, 0.25);
+  font-weight: normal;
+}
+.sg-component__title, .sg-component__title a {
+  color: #444444;
+}
+
+.sg-tabs {
+  border-bottom: 1px solid #444444;
+}
+.sg-tabs > li > a {
+  background-color: #f2f2f2;
+  color: #444444;
+  border: 1px solid #444444;
+}
+
+[role="tabpanel"] {
+  border-color: #444444;
+}
+[role="tabpanel"]:before {
+  background: #444444;
+}
+
+.is-current-page,
+.is-current-page > a {
+  color: #444444 !important;
+  border-color: #444444 !important;
+}

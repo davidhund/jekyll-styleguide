@@ -1,0 +1,37 @@
+---
+layout: component
+title: Nav--tabs
+categories: components
+tags:
+- ui
+- javascript
+scssurl: "https://github.com/davidhund/dh-kickstart-style/blob/master/components/_nav--tabs.scss"
+javascript:
+- "/static/js/tabs.example.js"
+---
+
+<!-- 
+ARIA markup is added with JS
+Some a11y ARIA markup taken from: 
+http://heydonworks.com/practical_aria_examples/
+-->
+<div class="tabs">
+    <ul class="nav nav--tabs">
+        <li><a href="#tabcontent-1">A Tab</a></li>
+        <li><a href="#tabcontent-2">Another Tab</a></li>
+        <li><a href="#tabcontent-3">Tabby</a></li>
+    </ul>
+    <section id="tabcontent-1" class="tabs__content">
+        <h3>Tabcontent 1</h3>
+        <p>Note how this component needs <em>Javascript</em>. It is added to the post by adding a `javascript` collection to the YAML. However: This tab-control is itself nested in the Styleguide Tabs. This breaks :(</p>
+        <p>At least you can see how it should have worked by clicking the Styleguide tabs (e.g. HTML) above ;)</p>
+    </section>
+    <section id="tabcontent-2" class="tabs__content">
+        <h3>Tabcontent 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, eligendi, quia deserunt laudantium beatae corporis. Illo, expedita, libero, fuga obcaecati repellat quisquam repellendus laudantium possimus pariatur vero ad tenetur magni.</p>
+    </section>
+    <section id="tabcontent-3" class="tabs__content">
+        <h3>Tabcontent 3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, eligendi, quia deserunt laudantium beatae corporis. Illo, expedita, libero, fuga obcaecati repellat quisquam repellendus laudantium possimus pariatur vero ad tenetur magni.</p>
+    </section>
+</div>
