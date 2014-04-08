@@ -55,7 +55,7 @@ Then add your project's CSS file to Jekyll Styleguide (or `@import` is in its `a
 
 Now you should have all the requirements for installing Jekyll. The [GulpJS](http://gulpjs.com/) workflow requires NodeJS, NPM and a bunch of Gulp plugins. But let's ignore those and start simple, OK?
 
-1. Install [Jekyll](http://jekyllrb.com): `gem install jekyll`
+1. Install [Jekyll](http://jekyllrb.com): `gem update --system && gem install jekyll`
 2. [Download]({{site.repo}}) **or** `git clone git@github.com:davidhund/jekyll-styleguide.git`
 3. Add your colors in `colors/index.md`
 4. Add your components in `posts/components/`

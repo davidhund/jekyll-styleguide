@@ -30,14 +30,14 @@
 		<meta name="msapplication-window" content="width=1024;height=600" />
 		<meta name="msapplication-navbutton-color" content="#222" />
 		<!-- Windows 8 Tile icon / colour -->
-		<meta name="msapplication-TileImage" content="/metro-tile.png" />
+		<meta name="msapplication-TileImage" content="{{site.baseurl}}metro-tile.png" />
 		<meta name="msapplication-TileColor" content="#222" />
 
-		<link rel="stylesheet" href="/static/css/app.min.css">
+		<link rel="stylesheet" href="{{site.baseurl}}static/css/app.min.css">
 
 		{% comment %}
 		Custom Component CSS could go here: 
-		Better is to add it to /static/scss/app.scss
+		Better is to add it to static/scss/app.scss
 		{% endcomment %}
 		{% for css in site.custom_css %}
 		<link rel="stylesheet" href="{{css}}">
@@ -45,8 +45,8 @@
 
 		<script>with(document.documentElement){className=className.replace(/\bno-js\b/,'js')}</script>
 
-		<link rel="stylesheet" href="/static/js/vendor/prism/prism.css">
-		<script src="/static/js/vendor/prism/prism.js"></script>
+		<link rel="stylesheet" href="{{site.baseurl}}static/js/vendor/prism/prism.css">
+		<script src="{{site.baseurl}}static/js/vendor/prism/prism.js"></script>
 
 	</head>
 	<body>

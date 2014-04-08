@@ -33,12 +33,18 @@ gulp.task('sass', function() {
 	return gulp.src(paths.scss+'app.scss')
 		.pipe(sass({ style: 'expanded' }))
 		.pipe(autoprefixer('> 5%', 'last 2 version', 'ie 9'))
-		.pipe(gulp.dest(paths.css))
 		.pipe(minifycss())
 		.pipe(rename({suffix: '.min'}))
-		// .pipe(gulp.dest(paths.css))
-		.pipe(gulp.dest('./_site/static/css/'))
+		.pipe(gulp.dest(paths.css))
+		// .pipe(gulp.dest('./_site/static/css/'))
 		// .pipe(notify({ message: 'Styles task complete' }));
+});
+
+// COPY CSS
+gulp.task('copycss', function() {
+	return gulp.src(paths.css+'app.min.css')
+		.pipe(gulp.dest('./_site/static/css/'))
+		// .pipe(notify({ message: 'Copied Minified CSS to _site/static/css' }));
 });
 
 
@@ -46,12 +52,12 @@ gulp.task('sass', function() {
 // Start a `jekyll build` task
 // From: http://stackoverflow.com/questions/21293999/use-jekyll-with-gulp
 gulp.task('jekyll-build', function() {
-	require('child_process').spawn('jekyll', ['build'], {stdio: 'inherit'});
+	require('child_process').spawn('jekyll', ['build', '--config _config.dev.yml'], {stdio: 'inherit'});
 });
 
 // Start a `jekyll build --watch` task
 gulp.task('jekyll-watch', function() {
-	require('child_process').spawn('jekyll', ['build', '--watch'], {stdio: 'inherit'});
+	require('child_process').spawn('jekyll', ['build', '--watch', '--config _config.dev.yml'], {stdio: 'inherit'});
 });
 
 // BROWSER-SYNC
@@ -70,7 +76,7 @@ gulp.task('watch', function() {
 	// gulp.watch('./_config.yml', ['jekyll']);
 
 	// Run Sass when I update SCSS files
-	gulp.watch(paths.scss+'**/*.scss', ['sass']);
+	gulp.watch(paths.scss+'**/*.scss', ['sass', 'copycss']);
 	// gulp.watch(paths.js+'**/*.js', ['scripts']);
 	// gulp.watch(paths.img+'**/*', ['images']);
 });

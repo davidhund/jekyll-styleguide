@@ -1,10 +1,10 @@
-<h2><a{% if 'Colors' == page.title %} class="is-current-page"{% endif %} href="/colors">Colors</a> <a href="#color-info" class="js-expand-toggler">▸</a></h2>
+<h2><a{% if 'Colors' == page.title %} class="is-current-page"{% endif %} href="{{site.baseurl}}colors">Colors</a> <a href="#color-info" class="js-expand-toggler">▸</a></h2>
 
 <div class="js-to-toggle" id="color-info">
 	<p class="message message--warning">There are no <code>_posts/color/*.md</code>. Simply add your colors in the page at <a href="{{site.repo}}/blob/master/colors/index.md" title="Example of colors/index.md"><code>colors/index.md</code></a></p>
 </div>
 
-<h2><a{% if 'Components' == page.title %} class="is-current-page"{% endif %} href="/components">All components</a> <a href="#components-list" class="js-expand-toggler">▸</a></h2>
+<h2><a{% if 'Components' == page.title %} class="is-current-page"{% endif %} href="{{site.baseurl}}components">All components</a> <a href="#components-list" class="js-expand-toggler">▸</a></h2>
 <ul class="sg-linklist js-to-toggle" id="components-list">
 {% for component in site.categories['components'] %}
 	<li class="{% if component.path == page.path %}is-current-page{% endif %}"><a href="{{component.url}}" title="{{component.path}}">{{component.title}}</a></li>

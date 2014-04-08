@@ -5,15 +5,15 @@
 			</ul>
 			<ul class="sg-nav">
 				<li>Example OOCSS objects: <a href="https://github.com/davidhund/dh-kickstart-style/">DH Kickstart-Style</a></li>
-				<li>Example Theme: <a href="{{site.repo}}/blob/master/static/scss/themes/plain.theme.scss">Plain</a></li>
+				<li>Example Theme: <a href="{{site.repo}}/blob/masterstatic/scss/themes/plain.theme.scss">Plain</a></li>
 			</ul>
 			<p>The source for {{site.sitename}} can be found at <a href="{{site.repo}}">Github</a></p>	
 		</footer>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="/static/js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
-		<script src="/static/js/main.js"></script>
+		<script>window.jQuery || document.write('<script src="{{site.baseurl}}static/js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+		<script src="{{site.baseurl}}static/js/main.js"></script>
 
-		{% comment %} Custom global JS could go here: Better is to add it to /static/js/main.js{% endcomment %}
+		{% comment %} Custom global JS could go here: Better is to add it to static/js/main.js{% endcomment %}
 		{% for js in site.custom_js %}
 		<script src="{{js}}"></script>
 		{% endfor %}
