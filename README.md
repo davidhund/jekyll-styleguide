@@ -10,7 +10,7 @@ To add a new Component, simply create a new markdown (`.md` or `.html`) file wit
 
 Then add your project's CSS file to Jekyll Styleguide (or `@import` is in its `app.scss`) and see how these components render.
 
-<p class="message">Notice how the *included* project CSS is applied to the content (white area)? In the website example you'll see my [DH kickstart-style](https://github.com/davidhund/dh-kickstart-style/) styles. If you have not (yet) included *your* styles in `static/scss/app.scss` you'll see unstyled text. Jekyll Styleguide themes do not interfere with your project's CSS.</p>
+<p class="message">Notice how the *<em>included</em>* project CSS is applied to the content (white area)? In the website example you'll see my <a href="https://github.com/davidhund/dh-kickstart-style/">DH kickstart-style</a> styles. If you have not (yet) included *<em>your</em>* styles in <code>static/scss/app.scss</code> you'll see unstyled text. Jekyll Styleguide themes do not interfere with your project's CSS.</p>
 
 ## Table Of Contents
 
@@ -31,11 +31,11 @@ Then add your project's CSS file to Jekyll Styleguide (or `@import` is in its `a
 
 ### Requirements
 
-<p class="message">So, I basically created this for [myself](http://twitter.com/valuedstandards). I am on a Mac. This *probably* works on Windows and \*nix but you'd have to probably change a bunch of stuff. So, these instructions are Mac only a.t.m. Sorry.</p>
+<p class="message">So, I basically created this for <a href="http://twitter.com/valuedstandards">myself</a>. I am on a Mac. This <em>probably</em> works on Windows and \*nix but you'd have to probably change a bunch of stuff. So, these instructions are Mac only a.t.m. Sorry.</p>
 
 [Jekyll requires Ruby, Rubygems and a Linux, Unix or Mac OSX system](http://jekyllrb.com/docs/installation/). If you do not yet have those installed—and are on Mac OSX—I strongly advise you to install those as follows:
 
-<p class="message message--warning">**Note:** Skip these steps if you already have the needed tools (Ruby, Gems, etc) installed. Avoid using `sudo`</p>
+<p class="message message--warning"><strong>Note:</strong> Skip these steps if you already have the needed tools (Ruby, Gems, etc) installed. Avoid using <code>sudo</code></p>
 
 1. Make sure you have the [OSX Xcode *Command Line Tools* installed](https://encrypted.google.com/search?hl=en&q=How+to+install+Xcode+command+line+tools)
 2. Install Ruby via [RVM](http://rvm.io):  
