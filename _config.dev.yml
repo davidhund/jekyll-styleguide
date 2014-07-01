@@ -18,7 +18,7 @@ baseurl:
 port: 4000
 source:      .
 destination: ./_site
-exclude:     [node_modules, './static/scss/', .sass-cache, gulpfile.js, Gruntfile.js, package.json, HOWTO.md]
+exclude:     [node_modules, './static/scss/', .sass-cache, gulpfile.js, package.json, HOWTO.md]
 #plugins:     ./_plugins
 future:      false
 lsi:         false
